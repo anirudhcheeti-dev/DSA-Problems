@@ -1,7 +1,13 @@
 class Solution {
     public int[] sortArray(int[] nums) {
-        Arrays.sort(nums);
-        return nums;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for(int i = 0; i < nums.length; i++){
+            pq.add(nums[i]);
+        }
+        int[] result = new int[nums.length];
+        for(int i = 0; i < nums.length; i++){
+            result[i] = pq.poll();
+        }
+        return result;
     }
-
 }
