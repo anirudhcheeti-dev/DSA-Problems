@@ -13,7 +13,7 @@ class Solution {
 
         for(int i=s.length()-2;i>=0;i--){
             if(map.get(s.charAt(i))<map.get(s.charAt(i+1))){
-                res=res-map.get(s.charAt(i));
+                res-=map.get(s.charAt(i));
             }
             else
         {
