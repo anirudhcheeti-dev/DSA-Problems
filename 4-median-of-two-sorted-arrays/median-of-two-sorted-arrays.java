@@ -8,7 +8,19 @@ class Solution {
           arr[nums1.length+i] = nums2[i];
       }
       Arrays.sort(arr);
-     int low=0;
+      int n=arr.length;
+        if(n%2!=0){
+                return (double) arr[n/2];
+        }
+        else{
+            return (double) (arr[n/2-1]+arr[n/2])/2;
+        }
+
+
+
+    
+
+     /*int low=0;
       int high=arr.length-1;
       double res=0;
       while(low<=high) {
@@ -21,6 +33,6 @@ class Solution {
           low++;
           high--;
       }
-            return res;
+            return res;*/
     }
 }
