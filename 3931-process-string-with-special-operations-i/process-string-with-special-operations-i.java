@@ -13,7 +13,7 @@ class Solution {
             else if(s.charAt(i)=='%'){
                 sb.reverse();
             }
-            else if(s.charAt(i)>='a'&&s.charAt(i)<='z'){
+            else { //if(s.charAt(i)>='a'&&s.charAt(i)<='z'){
                 sb.append(s.charAt(i));
             }
         }
