@@ -1,13 +1,26 @@
 class Solution {
-    public void sortColors(int[] nums) {
-        //int[] res=new int[nums.length];
-        PriorityQueue<Integer> pq=new PriorityQueue<>();
-        for(int i:nums){
-            pq.add(i);
+    public void sortColors(int[] arr) {
+        int i = 0;
+        int j=0;
+        int k = arr.length - 1;
+        if(arr.length==1) return;
+        while (j<= k) {
+            if(arr[j]==0){
+                int temp=arr[j];
+                arr[j]=arr[i];
+                arr[i]=temp;
+                i++;
+                j++;
+            }
+            else if(arr[j]==1){
+                j++;
+            }
+            else if(arr[j]==2){
+                int temp=arr[j];
+                arr[j]=arr[k];
+                arr[k]=temp;
+                k--;
+            } 
         }
-        for(int i=0;i<nums.length;i++){
-            nums[i]=pq.poll();
-        }
-        
     }
 }
