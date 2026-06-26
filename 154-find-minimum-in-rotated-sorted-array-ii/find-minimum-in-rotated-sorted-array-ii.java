@@ -9,6 +9,7 @@ class Solution {
                 i=mid+1;
             }
             else if(nums[i]==nums[j]){
+                i++;
                 j--;
             }
             else{
