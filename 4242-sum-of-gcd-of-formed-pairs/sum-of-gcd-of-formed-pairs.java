@@ -20,11 +20,9 @@ class Solution {
 
     }
     public int findgcd(int a,int b){
-        while (b!=0){
-            int temp = b;
-            b = a%b;
-            a = temp;
-        }
+       if(b==0){
         return a;
+       }
+        return findgcd(b,a%b);
     }
 }
