@@ -23,12 +23,9 @@ class Solution {
             int size=q.size();
             for(int i=0;i<size;i++){
                 TreeNode curr=q.poll();
-                if(curr.left==null && curr.right==null){
-                    sum+=curr.val;
-                }
+                sum+=curr.val;
                 if(curr.left!=null) q.offer(curr.left);
                 if(curr.right!=null) q.offer(curr.right);
-                
             }
         }
         return sum;
