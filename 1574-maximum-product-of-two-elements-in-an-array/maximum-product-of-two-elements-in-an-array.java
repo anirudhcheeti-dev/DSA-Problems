@@ -2,15 +2,34 @@ class Solution {
     public int maxProduct(int[] nums) {
         int n=nums.length;
         int max=0;
-        for(int i=0;i<nums.length;i++){
+        int i=0;
+        while(i<nums.length){
             int j=i+1;
             while(j<n){
                 int sum=(nums[i]-1)*(nums[j]-1);
                 max=Math.max(max,sum);
                 j++;
             }
+            i++;
         }
         return max;
+
+
+
+
+
+
+        // int n=nums.length;
+        // int max=0;
+        // for(int i=0;i<nums.length;i++){
+        //     int j=i+1;
+        //     while(j<n){
+        //         int sum=(nums[i]-1)*(nums[j]-1);
+        //         max=Math.max(max,sum);
+        //         j++;
+        //     }
+        // }
+        // return max;
 
 
         // Arrays.sort(nums);
