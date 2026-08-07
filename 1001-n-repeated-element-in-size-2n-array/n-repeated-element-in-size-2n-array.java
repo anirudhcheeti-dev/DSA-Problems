@@ -1,17 +1,25 @@
 class Solution {
     public int repeatedNTimes(int[] nums) {
-        HashMap<Integer,Integer> map=new HashMap<>();
+        HashSet<Integer> set=new HashSet<>();
         for(int i:nums){
-            map.put(i,map.getOrDefault(i,0)+1);
+            if(set.contains(i)) return i;
+            set.add(i);
         }
-        int max=0;
-        int ans=0;
-        for(int i:map.keySet()){
-            if(map.get(i)>max){
-                max=map.get(i);
-                ans=i;
-            }
-        }
-        return ans;
+        return -1;
+        
+        
+        // HashMap<Integer,Integer> map=new HashMap<>();
+        // for(int i:nums){
+        //     map.put(i,map.getOrDefault(i,0)+1);
+        // }
+        // int max=0;
+        // int ans=0;
+        // for(int i:map.keySet()){
+        //     if(map.get(i)>max){
+        //         max=map.get(i);
+        //         ans=i;
+        //     }
+        // }
+        // return ans;
     }
 }
