@@ -36,23 +36,22 @@ class Solution {
             }
             }
             right--;
-            if(top<=bottom){
                 for(int i=right;i>=left;i--){
                      if(head!=null){
                     matrix[bottom][i]=head.val;
                     head=head.next;
                 }
                 }
-            }
+            
             bottom--;
-            if(left<=right){
+            
                 for(int i=bottom;i>=top;i--){
                       if(head!=null){
                     matrix[i][left]=head.val;
                     head=head.next;
                 }
                 }
-            }
+            
             left++;
         }
         return matrix;
