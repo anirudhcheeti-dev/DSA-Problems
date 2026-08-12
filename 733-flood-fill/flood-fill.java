@@ -2,6 +2,7 @@ class Solution {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         int main=image[sr][sc];
         if(main==color) return image;
+        //to make sure the first elemtn we get itself isnt the colour;
         dfs(image,sr,sc,color,main);
         return image;
     }
