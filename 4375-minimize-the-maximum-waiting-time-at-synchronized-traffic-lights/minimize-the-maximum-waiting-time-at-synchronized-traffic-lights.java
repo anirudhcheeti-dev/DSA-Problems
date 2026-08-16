@@ -3,13 +3,18 @@ class Solution {
         int n=lights.length;
         int m=a.length;
         int wait=0;
-        Arrays.sort(lights);
+        // Arrays.sort(lights); - The person who seeing this (using this give 10ms so dont);
+        int maxLight=0;
+        for(int i:lights){
+            if(i>maxLight){
+                maxLight=i;
+            }
+        }
         for(int i=0;i<m;i++){
             int r=a[i]%period;
-            if(r>=lights[n-1]){
+            if(r>=maxLight){
                 wait=Math.max(wait,period-r);
             }
-            else wait+=0;
         }
         return wait;
     }
