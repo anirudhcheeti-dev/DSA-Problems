@@ -1,6 +1,6 @@
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
-        return topdown(cost);
+        return bottomup(cost);
     }
     // Approach 1: Top-Down
     public int topdown(int[] cost){
